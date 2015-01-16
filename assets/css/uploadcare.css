@@ -1,0 +1,60 @@
+@font-face {
+    font-family:'gotham_proregular';
+    src:url(../../fonts/gothaproreg-webfont.eot?1415274038);
+    src:url(../../fonts/gothaproreg-webfont.eot?&1415274038#iefix) format("embedded-opentype"),url(../../fonts/gothaproreg-webfont.woff?1415274038) format("woff"),url(../../fonts/gothaproreg-webfont.ttf?1415274038) format("truetype"),url(../../fonts/gothaproreg-webfont.svg?1415274038#gotham_proregular) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face {
+    font-family:'gotham_prolight';
+    src:url(../../fonts/gothaprolig-webfont.eot?1415274038);
+    src:url(../../fonts/gothaprolig-webfont.eot?&1415274038#iefix) format("embedded-opentype"),url(../../fonts/gothaprolig-webfont.woff?1415274038) format("woff"),url(../../fonts/gothaprolig-webfont.ttf?1415274038) format("truetype"),url(../../fonts/gothaprolig-webfont.svg?1415274038#gotham_prolight) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face {
+    font-family:'gotham_probold';
+    src:url(../../fonts/gothaprobol-webfont.eot?1415274038);
+    src:url(../../fonts/gothaprobol-webfont.eot?&1415274038#iefix) format("embedded-opentype"),url(../../fonts/gothaprobol-webfont.woff?1415274038) format("woff"),url(../../fonts/gothaprobol-webfont.ttf?1415274038) format("truetype"),url(../../fonts/gothaprobol-webfont.svg?1415274038#gotham_probold) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face {
+    font-family:'gotham_promedium';
+    src:url(../../fonts/gothapromed-webfont.eot?1415274038);
+    src:url(../../fonts/gothapromed-webfont.eot?&1415274038#iefix) format("embedded-opentype"),url(../../fonts/gothapromed-webfont.woff?1415274038) format("woff"),url(../../fonts/gothapromed-webfont.ttf?1415274038) format("truetype"),url(../../fonts/gothapromed-webfont.svg?1415274038#gotham_promedium) format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+html, body {
+    font-family: gotham_proregular sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: gotham_promedium sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: gotham_proregular sans-serif;
+}
+
+.main-nav a {
+    font-family: gotham_prolight sans-serif;
+    font-weight: normal;
+}
+
+.page-title {
+    font-family: gotham_probold sans-serif;
+    font-weight: normal;
+}
+
+.page-description {
+    font-family: gotham_promedium sans-serif;
+    font-weight: normal;
+}
