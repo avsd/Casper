@@ -79,8 +79,9 @@ h3 {
 }
 
 .page-title {
-    font-family: gotham_probold, sans-serif;
+    font-family: gotham_promedium, sans-serif;
     font-weight: normal;
+    font-size: 3rem;
 }
 
 .page-description {
