@@ -43,30 +43,30 @@
 }
 
 html, body {
-    font-family: gotham_proregular sans-serif;
+    font-family: gotham_proregular, sans-serif;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: gotham_promedium sans-serif;
+    font-family: gotham_promedium, sans-serif;
     font-weight: normal;
 }
 
 h2 {
-    font-family: gotham_proregular sans-serif;
+    font-family: gotham_proregular, sans-serif;
 }
 
 .main-nav a {
-    font-family: gotham_prolight sans-serif;
+    font-family: gotham_prolight, sans-serif;
     font-weight: normal;
 }
 
 .page-title {
-    font-family: gotham_probold sans-serif;
+    font-family: gotham_probold, sans-serif;
     font-weight: normal;
 }
 
 .page-description {
-    font-family: gotham_promedium sans-serif;
+    font-family: gotham_promedium, sans-serif;
     font-weight: normal;
 }
