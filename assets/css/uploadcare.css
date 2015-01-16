@@ -44,6 +44,9 @@
 
 html, body {
     font-family: gotham_proregular, sans-serif;
+}
+
+body {
     font-size: 1.6rem;
     line-height: 1.6em;
     color: #777;
