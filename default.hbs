@@ -16,28 +16,106 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" id="fonts-css" type="text/css" media="all" 
+        href="http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%7COswald%3A400&#038;ver=4.1"/>
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/style.css'}}?ver=1.4" id="style-css" media="all" />
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/style-inline.css'}}?ver=1.4" id="style-inline-css" />
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/pluginstyle.css'}}?ver=1.4" id="plugins-style-css" />
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/responsive.css'}}?ver=1.4" id="responsive-style-css" />
+
+    <script type='text/javascript' src="{{asset 'libs/jquery.js'}}?ver=1.11.1"></script>
+    <script type='text/javascript' src="{{asset 'libs/jquery-migrate.min.js'}}?ver=1.2.1"></script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} home page-id-8 page page-template page-template-home-page-php no-js">
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+  <script type="text/javascript">
+    document.body.className=document.body.className.replace('no-js','js-enabled');
+  </script>
 
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-    </footer>
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
+    <nav class="navigation-mobile">
+      <span class=" icon-cancel3 navigation-close"></span>
+      <ul class="menu" id="menu-promotion"> {{> "nav"}} </ul>
+    </nav>
 
-    {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <div class="layout animation">
+    <div class="wrap">
 
+        <!-- Page Loader -->
+        <div id="loader" class="page-loader hidden-tablet hidden-phone">
+            <div class="text">
+                <div  class="job-title"></div>
+                <div data-content="" class="name">David Avs</div>
+            </div>
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+
+        <!--Header-->
+        <header class="first">
+
+    <a class="navigation-button hidden-desktop visible-tablet" href="#">
+        <span class="icon-paragraph-justify"></span>
+    </a>
+
+    <div class="max-container clearfix">
+        
+        <div class="logo">
+            <a href="http://wp.davidavs.com/?home">
+                
+                    <div class="job-title">Web Developer &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Tech Entrepreneur &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; EMBA Candidate</div>
+                    <div class="name">David Avs</div>
+                    <div class="name-small">David Avs</div>
+
+                            </a>
+        </div>
+
+        <nav class="navigation hidden-tablet hidden-phone">
+            <ul id="menu-promotion-1" class="clearfix"> {{> "nav"}} </ul>
+        </nav>
+
+    </div>
+
+</header>        <!--End Header-->
+
+{{{body}}}
+
+<footer class="open">
+    <!-- Footer Switch -->
+    <a href="#" class="footer-switch"><span></span></a>
+    <!-- Footer Content -->
+    <div class="content">
+        <!-- Social Icons -->
+        <ul class="social-icons clearfix">
+                        <li><a href="https://www.facebook.com/d.avsajanishvili"><span class="icon-facebook5"></span></a></li>
+                        <li><a href="http://twitter.com/davsajanishvili"><span class="icon-twitter5 "></span></a></li>
+                        <li><a href="https://vimeo.com/user16406170"><span class="icon-vimeo2"></span></a></li>
+                        <li><a href="http://lnkd.in/YGDHRZ"><span class="icon-linkedin"></span></a></li>
+                        <li><a href="https://github.com/avsd"><span class="icon-github5"></span></a></li>
+                        <li><a href="http://wp.davidavs.com/?feed=rss2"><span class="icon-feed3"></span></a></li>
+                        <li><a href="skype:avsd05?chat"><span class="icon-skype"></span></a></li>
+            
+        </ul>
+        <!-- Copyright -->
+        <p class="copyright">  </p>
+    </div>
+</footer>
+<!--end of wrap element-->
+</div>
+<!--end of layout element-->
+</div>
+    <!-- Theme Hook -->
+    <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&#038;language=en&#038;ver=1.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var appdata = {"gkey":"","path":{"img":"http:\/\/wp.davidavs.com\/wp-content\/themes\/promotion\/assets\/img","js":"http:\/\/wp.davidavs.com\/wp-content\/themes\/promotion\/assets\/js"},"extrajs":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://wp.davidavs.com/wp-content/themes/promotion/assets/js/allscripts.js?ver=1.4'></script>
 </body>
 </html>
