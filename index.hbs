@@ -1,6 +1,10 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
+<body class="home page-template-home-page page-template-home-page-php page-id-8 page page-template no-js">
+
+{{> "header"}}
+
 <div id="main" class="main">
     <div id="main-content" class="main-content" page-type="home">
 
@@ -46,9 +50,7 @@
     </div>
 </div>
 
+{{> "footer"}}
 
-<script>
-    if (window.location.pathname == '' || window.location.pathname == '/') {
-        $('body').addClass('home');
-    }
-</script>
+</body>
+

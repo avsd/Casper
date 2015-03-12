@@ -978,6 +978,8 @@
 
         // Navigation click animation (Menu Out)
         $x.click(function(e){
+            if ($(this).attr('href') == window.location) return;
+            if ($(this).attr('target')) return;
             var $oldEl = $('#main-content'),
                 menuState = $(this).attr('menu');
 
@@ -2043,6 +2045,7 @@
                 },
                 marker:{
                     values:[
+                        {'latLng': [51.5072,-0.1275], 'options': {'icon': 'http://www.ucarecdn.com/788df926-cafc-4c42-9aa9-bbfa4ebd0f9d/-/crop/200x200/100,40/-/preview/40x40/green.png'}},
                         {'latLng': [lat,lng]}
                     ],
                     options:{
@@ -2056,6 +2059,8 @@
             {
                 lat = parseFloat(lat);
                 lng = parseFloat(lng);
+                // CUSTOM;
+                lat = 47.4925, lng = 19.0514;
                 settings.map.options['center'] = [lat, lng];
             }
             else if(addr.length)
@@ -2169,7 +2174,7 @@
             var is_safari = navigator.userAgent.indexOf("Safari") > -1;
             if ((is_chrome)&&(is_safari)) {is_safari=false;}
 
-            if ((is_explorer) || (is_safari)){
+            if ((is_explorer) || (is_safari) || true){
                 $(".page-loader .name ,.page-loader .job-title").fadeOut(300);
                 $(".page-loader").fadeOut(2500,function(){
                     $('.page-loader').removeClass('first-loader').addClass('second-loader');
