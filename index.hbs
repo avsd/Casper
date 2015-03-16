@@ -1,54 +1,214 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
-<body class="home page-template-home-page page-template-home-page-php page-id-8 page page-template no-js">
+<body class="blog no-js">
 
 {{> "header"}}
 
-<div id="main" class="main">
-    <div id="main-content" class="main-content" page-type="home">
-
-        <!-- Background for tablet and mobile -->
-        <div class="home-background"></div>
-
-        <!-- Home Overlay -->
-        <div class="overlay" style=" background-image:url(http://wp.davidavs.com/wp-content/themes/promotion/lib/admin/img/texture/1.png); background-color:rgba(255, 255, 255 , 0.3 );"></div>
-
-        <div class="max-container">
+    <div class="main" id="main">
+        <div class="main-content container container-vspace" id="main-content">
             <div class="row">
                 <div class="span9">
-                    <!-- Biography -->
-                    <div class="biography">
-                                                <div class="image">
-                                                        <img src="http://wp.davidavs.com/wp-content/uploads/2015/02/pDqAp5rI.jpg" alt="Personal image" />
-                        </div>
-                                                <div class="content ">
-                            <h5 class="title">DAVID AVSAJANISHVILI</h5>
-                                                        <div class="separator"></div>
-                                                        <div class="bio">
-                            <p style="text-align: left;">I am a professional <strong>Software Developer</strong> with experience of working in different industries for 12+ years, including Telecom, ERP, Commercial Banking, Business and Technology SaaS, and online B2C services. For the past 5 years I have acted as a <strong>Technology Entrepreneur</strong>, helping tech startups to succeed. I have been working in different roles, both as a co-founder and as an external consultant.</p>
-<p style="text-align: left;">I am currently doing <strong>Executive MBA</strong> degree at Hult International Business School in London. The program in world&#8217;s most international business school provides a foundation to use my experience and skills more effectively. Expecting to graduate in August, 2015.</p>
+                    <h1 class="page-title">BLOG</h1>
+
+                    <div class="posts clearfix">
+                      {{> "loop"}}
+                    </div>
+
+                </div>
+
+{{!--
+                <div class="span3">
+                    <div class="sidebar widget-area no-widgets">
+                        <div class="widget widget_search" id="search-2">
+                            <div class="search-form">
+                                <form action="http://wp.davidavs.com/">
+                                    <fieldset>
+                                        <input data-defaultvalue=
+                                        "Search something ..." name="s"
+                                        placeholder="Find" type="text" value=
+                                        ""> <input type="submit" value="&gt;">
+                                    </fieldset>
+                                </form>
+
+                                <div class="cursor"></div>
                             </div>
-                                                    </div>
+                        </div>
+
+                        <div class="widget widget_recent_entries" id=
+                        "recent-posts-2">
+                            <h4 class="widget-title">Recent Posts</h4>
+                            <hr class="hr-small">
+
+                            <ul>
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=366">Post
+                                    Three</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=364">Post
+                                    Two</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=362">Post 1</a>
+                                </li>
+
+                                <li>
+                                    <a href="http://wp.davidavs.com/?p=359">A
+                                    Post With Featured Image</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=347">Test
+                                    Post</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget_recent_comments" id=
+                        "recent-comments-2">
+                            <h4 class="widget-title">Recent Comments</h4>
+                            <hr class="hr-small">
+
+                            <ul id="recentcomments">
+                                <li class="recentcomments">
+                                    <span class="comment-author-link"><a class=
+                                    'url' href='https://wordpress.org/' rel=
+                                    'external nofollow'>Mr WordPress</a></span>
+                                    on <a href=
+                                    "http://wp.davidavs.com/?p=1#comment-1">Hello
+                                    world!</a>
+                                </li>
+
+                                <li class="recentcomments">
+                                    <span class=
+                                    "comment-author-link">forough</span> on
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=237#comment-4">A
+                                    SHORT FILM BY BEN BRIEND</a>
+                                </li>
+
+                                <li class="recentcomments">
+                                    <span class=
+                                    "comment-author-link">forough</span> on
+                                    <a href=
+                                    "http://wp.davidavs.com/?p=189#comment-3">Work
+                                    Published in Design</a>
+                                </li>
+
+                                <li class="recentcomments">
+                                    <span class="comment-author-link"><a class=
+                                    'url' href='http://demo.pixflow.net/' rel=
+                                    'external nofollow'>Mr WordPress</a></span>
+                                    on <a href=
+                                    "http://wp.davidavs.com/?p=173#comment-2">Hello
+                                    world!</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget_archive" id="archives-2">
+                            <h4 class="widget-title">Archives</h4>
+                            <hr class="hr-small">
+
+                            <ul>
+                                <li>
+                                    <a href=
+                                    'http://wp.davidavs.com/?m=201502'>February
+                                    2015</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    'http://wp.davidavs.com/?m=201405'>May
+                                    2014</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    'http://wp.davidavs.com/?m=201404'>April
+                                    2014</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget_categories" id=
+                        "categories-2">
+                            <h4 class="widget-title">Categories</h4>
+                            <hr class="hr-small">
+
+                            <ul>
+                                <li class="cat-item cat-item-2">
+                                    <a href=
+                                    "http://wp.davidavs.com/?cat=2">Art</a>
+                                </li>
+
+                                <li class="cat-item cat-item-3">
+                                    <a href=
+                                    "http://wp.davidavs.com/?cat=3">Culture</a>
+                                </li>
+
+                                <li class="cat-item cat-item-4">
+                                    <a href=
+                                    "http://wp.davidavs.com/?cat=4">Music</a>
+                                </li>
+
+                                <li class="cat-item cat-item-5">
+                                    <a href=
+                                    "http://wp.davidavs.com/?cat=5">Producttion</a>
+                                </li>
+
+                                <li class="cat-item cat-item-1">
+                                    <a href=
+                                    "http://wp.davidavs.com/?cat=1">Uncategorized</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="widget widget_meta" id="meta-2">
+                            <h4 class="widget-title">Meta</h4>
+                            <hr class="hr-small">
+
+                            <ul>
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/wp-login.php">Log
+                                    in</a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?feed=rss2">Entries
+                                    <abbr title=
+                                    "Really Simple Syndication">RSS</abbr></a>
+                                </li>
+
+                                <li>
+                                    <a href=
+                                    "http://wp.davidavs.com/?feed=comments-rss2">
+                                    Comments <abbr title=
+                                    "Really Simple Syndication">RSS</abbr></a>
+                                </li>
+
+                                <li>
+                                    <a href="https://wordpress.org/" title=
+                                    "Powered by WordPress, state-of-the-art semantic personal publishing platform.">
+                                    WordPress.org</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-<!--
-<div class="span3">
-  <div class="sidebar widget-area border-left no-widgets">
-    <div id="px_twitter-3" class="widget widget_px_twitter">
-      <h4 class="widget-title">Tweets</h4>
-      <hr class="hr-small">
-      <ul class="twitter-recent-list">
-      </ul>
-    </div>
-  </div>
-</div>
--->
-
+--}}
             </div>
         </div>
     </div>
-</div>
 
 {{> "footer"}}
 

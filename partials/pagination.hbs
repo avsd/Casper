@@ -1,0 +1,15 @@
+<div class="post-pagination">
+{{#if prev}}
+  <a class="prev-page-link" href="{{page_url prev}}">
+    <div class="icon-arrow-left6"></div>
+  </a>
+{{/if}}
+  
+  <span class="this-page">Page {{page}} of {{pages}}</span>
+
+{{#if next}}
+  <a class="next-page-link" href="{{page_url next}}">
+    <div class="icon-uniE81F"></div>
+  </a>
+{{/if}}
+</div><!-- post-pagination --> 

@@ -1,24 +1,45 @@
-{{! Previous/next page links - only displayed on page 2+ }}
-<div class="extra-pagination inner">
-    {{pagination}}
-</div>
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
-        {{author}}
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-    </footer>
-</article>
+                        <article class=
+                        "post-366 post type-post status-publish format-standard hentry category-uncategorized item clearfix small">
+                        <div class="timeline-container">
+                                <div class="circle">
+                                    <div class="date">
+                                        <span class="year">{{date format='YYYY'}}</span>
+                                        <span class="day-month">{{date format="DD MMM"}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="line hidden-phone"></div>
+
+                                <div class=
+                                "hr-line hidden-tablet hidden-desktop"></div>
+                            </div>
+
+                            <div class="post-container">
+                                <div class="post-meta">
+                                    <h1 class="title"><a href=
+                                    "{{url}}">{{{title}}}</a></h1>
+
+                                    <div class="post-info clearfix">
+                                        <span class="post-author">Posted by
+                                        <a href="{{author.url}}" rel="author" title=
+                                        "Posts by davidavs">{{author}}</a></span>
+                                        <span class="post-info-separator">/</span>
+                                        <span class="post-date">{{date format='YYYY-MM-DD'}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="post-content">
+                                    <div class="text-comment clearfix">
+                                        <p>{{excerpt words="26"}}</p>
+                                        <a class="more-link" href="{{url}}">Keep
+                                        Reading<span class="icon-arrow-right5"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}
