@@ -1,34 +1,55 @@
-{{!< default-old}}
+{{!< default}}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<body class="single single-post postid-366 single-format-standard no-js">
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-    </nav>
-</header>
 
-<main class="content" role="main">
+{{> "header"}}
 
-    <article class="{{post_class}}">
+<article id="main" class="main {{post_class}}">
+  <div class="main-content container container-vspace single-post" id="main-content">
+    <div class="row">
+      <div class="span9">
+        <div class="post-366 post type-post status-publish format-standard hentry category-uncategorized">
+          <div class="head">
+            <h4 class="date">{{date format="YYYY / DD MMMM"}}</h4>
 
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
+            <h1 class="title">{{ title }}</h1>
+          </div>
 
-        <section class="post-content">
-            {{content}}
+          <div class="post-content">
+            <div class="post-info clearfix">
+              <span class="post-author">Posted by <a href="{{ author.url }}" rel="author" title=
+              "Posts by {{ author.name }}">{{ author.name }}</a></span> <span class="post-info-separator">/</span> <span class=
+              "post-date">{{date format="YYYY-MM-DD"}}</span> <span class="post-info-separator">/</span> <span class=
+              "post-categories">{{tags}}</span>
+            </div>
+            <hr class="media-separator">
+
+            <div class="post-content">
+                {{content}}
+            </div>
+          </div>
+        </div>
+
+        <section class="share">
+            <h4>Share this post</h4>
+            <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="hidden">Twitter</span>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <span class="hidden">Facebook</span>
+            </a>
+            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="hidden">Google+</span>
+            </a>
         </section>
-
-        <footer class="post-footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
@@ -55,41 +76,35 @@
 
         {{/author}}
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
+        <div class="comments">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'davidavs-blog';
+                var disqus_identifier = '{{post.id}}';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
 
-        </footer>
+      <div class="span3">
+        <div class="sidebar widget-area no-widgets"></div>
+      </div>
+    </div>
+  </div>
 
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES * * */
-            var disqus_shortname = 'davidavs-blog';
-            var disqus_identifier = '{{post.id}}';
-            
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-    </article>
-
-</main>
+</article>
 
 {{/post}}
+
+{{> "footer"}}
+
+</body>
+
